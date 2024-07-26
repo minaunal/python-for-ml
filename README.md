@@ -5,17 +5,18 @@ Bu projede tips.csv dataset'i seçilmiş, data preprocessing işlemleri yapılm�
 1) null değerler kontrol edildi. Dataset'te hiç null değere rastlanmadı.
 2) Gerekli yerlerde string verinin binary değer dönüşümü yapıldı. Örneğin:
 
-_df['smoker'] = df['smoker'].map({'Yes': 1, 'No': 0})
+df['smoker'] = df['smoker'].map({'Yes': 1, 'No': 0})
 df['sex'] = df['sex'].map({'Female': 1, 'Male': 0})
-df['time'] = df['time'].map({'Dinner': 1, 'Lunch': 0})_
+df['time'] = df['time'].map({'Dinner': 1, 'Lunch': 0})
 
 
 **Bu datasette verilecek tip label olarak belirlenmiştir. Bu aşamadalarda artık tip verisinin diğer  verilerle olan ilişkileri incelenecektir.**
+
 3) Öncelikle kategorik olmayan continous değerlerin (total_bill, size) tip (label) ile olan korelasyonuna bakıldı. Bunun için pearson korelasyonu hesaplandı. Örneğin:
 
-_correlation = df['total_bill'].corr(df['tip'])
+correlation = df['total_bill'].corr(df['tip'])
 print('Pearson Korelasyon Katsayısı:', correlation) 
-**_Bu kodun çıktısı:_** Pearson Korelasyon Katsayısı: 0.6757341092113646 şeklindedir. _
+**Output**: Pearson Korelasyon Katsayısı: 0.6757341092113646 şeklindedir. 
 
 
 4) haftanın günleri sayısal degere cevrildi.
