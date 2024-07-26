@@ -16,7 +16,8 @@ df['time'] = df['time'].map({'Dinner': 1, 'Lunch': 0})
 
 correlation = df['total_bill'].corr(df['tip'])
 print('Pearson Korelasyon Katsayısı:', correlation) 
-**Output**: Pearson Korelasyon Katsayısı: 0.6757341092113646 şeklindedir. 
+**Output**:
+Pearson Korelasyon Katsayısı: 0.6757341092113646 şeklindedir. 
 
 
 4) haftanın günleri sayısal degere cevrildi.
